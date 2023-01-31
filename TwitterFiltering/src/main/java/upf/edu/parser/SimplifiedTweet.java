@@ -37,11 +37,13 @@ public class SimplifiedTweet {
    * @return an {@link Optional} of a {@link SimplifiedTweet}
    */
   public static Optional<SimplifiedTweet> fromJson(String jsonStr) {
-
-    // PLACE YOUR CODE HERE!
-
-    return null;
+	  try {
+	        return Optional.ofNullable(new Gson().fromJson(jsonStr, SimplifiedTweet.class));
+	    } catch (Exception e) {
+	        return Optional.empty();
+	    }
   }
+
 
 
   @Override
