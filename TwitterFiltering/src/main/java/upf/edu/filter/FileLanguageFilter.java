@@ -3,15 +3,16 @@ package upf.edu.filter;
 
 import upf.edu.parser.SimplifiedTweet;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class FileLanguageFilter implements LanguageFilter{
     final String inputFile;
     final String outputFile;
 
+    List<Optional<SimplifiedTweet> > tweetsList = new ArrayList<>();
 
     public FileLanguageFilter(String inputFile, String outputFile) throws IOException {
         this.inputFile = inputFile;
@@ -19,17 +20,24 @@ public class FileLanguageFilter implements LanguageFilter{
         FileReader reader = new FileReader(inputFile);
         BufferedReader bReader = new BufferedReader(reader);
 
-        StringBuilder tweetJson = new StringBuilder();
-        while(bReader.ready()){
-            tweetJson.append(bReader.readLine());
+        while(bReader.ready()) {
+            tweetsList.add(SimplifiedTweet.fromJson(bReader.readLine()));
         }
-
-        Optional<SimplifiedTweet> sempTweet = SimplifiedTweet.fromJson(tweetJson.toString());
-        System.out.println(sempTweet);
+        bReader.close();
     }
 
     @Override
     public void filterLanguage(String language) throws Exception {
+        FileWriter writer = new FileWriter(this.outputFile);
+        BufferedWriter bWriter = new BufferedWriter(writer);
 
+        for(Optional<SimplifiedTweet> tweet : tweetsList){
+            if(tweet.isPresent()){
+                if(tweet.map(SimplifiedTweet::getLanguage).equals(Optional.ofNullable(language))){
+                    bWriter.write(tweet.map(SimplifiedTweet::toString).get());
+                }
+            }
+        }
+        bWriter.close();
     }
 }
