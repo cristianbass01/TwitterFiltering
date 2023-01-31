@@ -39,16 +39,15 @@ public class SimplifiedTweet {
      * @return an {@link Optional} of a {@link SimplifiedTweet}
      */
     public static Optional<SimplifiedTweet> fromJson(String jsonStr) {
-        long tweetId;              // the id of the tweet ('id')
-        String text;              // the content of the tweet ('text')
-        long userId;              // the user id ('user->id')
-        String userName;          // the user name ('user'->'name')
-        String language;          // the language of a tweet ('lang')
-        long timestampMs;          // seconduserIds from epoch ('timestamp_ms')
+        long tweetId = 0;              // the id of the tweet ('id')
+        String text = "";              // the content of the tweet ('text')
+        long userId = 0;              // the user id ('user->id')
+        String userName = "";          // the user name ('user'->'name')
+        String language = "";          // the language of a tweet ('lang')
+        long timestampMs = 0;          // seconduserIds from epoch ('timestamp_ms')
 
         JsonElement je = JsonParser.parseString(jsonStr);
         JsonObject jo = je.getAsJsonObject();
-
 
         if (jo.has("id"))
             tweetId = jo.get("id")
@@ -86,11 +85,8 @@ public class SimplifiedTweet {
             timestampMs = jo.get("timestampMs")
                     .getAsLong();
 
-
-
-
-
-}
+    return Optional.of(new SimplifiedTweet(tweetId, text, userId, userName, language, timestampMs));
+    }
 
 
 
