@@ -21,7 +21,9 @@ public class FileLanguageFilter implements LanguageFilter{
         BufferedReader bReader = new BufferedReader(reader);
 
         while(bReader.ready()) {
-            tweetsList.add(SimplifiedTweet.fromJson(bReader.readLine()));
+            String jsonTweet = bReader.readLine();
+            if(! jsonTweet.equals(""))
+                tweetsList.add(SimplifiedTweet.fromJson(jsonTweet));
         }
         bReader.close();
     }

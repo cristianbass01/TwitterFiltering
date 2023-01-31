@@ -77,12 +77,12 @@ public class SimplifiedTweet {
 
             }
         }
-        if (jo.has("language"))
-            language = jo.get("language")
+        if (jo.has("lang"))
+            language = jo.get("lang")
                     .getAsString();
 
-        if(jo.has("timestampMs"))
-            timestampMs = jo.get("timestampMs")
+        if(jo.has("timestamp_ms"))
+            timestampMs = jo.get("timestamp_ms")
                     .getAsLong();
 
     return Optional.of(new SimplifiedTweet(tweetId, text, userId, userName, language, timestampMs));
@@ -96,4 +96,8 @@ public class SimplifiedTweet {
   // The following line produces valid JSON as output
     return new Gson().toJson(this);
   }
+
+    public String getLanguage() {
+        return language;
+    }
 }
