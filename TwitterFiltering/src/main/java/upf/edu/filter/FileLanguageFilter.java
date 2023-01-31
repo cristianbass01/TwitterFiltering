@@ -19,14 +19,13 @@ public class FileLanguageFilter implements LanguageFilter{
         FileReader reader = new FileReader(inputFile);
         BufferedReader bReader = new BufferedReader(reader);
 
-        StringBuilder tweetJson = null;
+        StringBuilder tweetJson = new StringBuilder();
         while(bReader.ready()){
             tweetJson.append(bReader.readLine());
         }
 
-        Optional<SimplifiedTweet> sempTweet =
-
-
+        Optional<SimplifiedTweet> sempTweet = SimplifiedTweet.fromJson(tweetJson.toString());
+        System.out.println(sempTweet);
     }
 
     @Override
