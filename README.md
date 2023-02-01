@@ -19,3 +19,13 @@ TwitterFilter es /tmp/output-es.txt test-bucket f1.json f2.json f3.json
 ```
 will read 3 files (f1.json f2.json f3.json), and generate a new output file /tmp/output-es.txt contain-
 ing all the tweets in the Spanish (es) language, then upload such file in an S3 bucket named test-bucket.
+
+## Statistics (Benchmarking)
+1. 
+2. 
+3. 
+4. 
+
+## Extensions
+
+Describe unit tests
