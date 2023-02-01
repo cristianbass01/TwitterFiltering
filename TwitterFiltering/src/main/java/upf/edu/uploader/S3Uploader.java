@@ -1,9 +1,12 @@
 package upf.edu.uploader;
 
+import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.AmazonS3Exception;
+import com.amazonaws.services.s3.model.PutObjectRequest;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,25 +26,24 @@ public class S3Uploader implements Uploader {
 
         this.s3Client = AmazonS3ClientBuilder
                 .standard()
-                .withRegion(Regions.US_WEST_2)
+                .withRegion(Regions.US_EAST_1)
                 .withCredentials(new ProfileCredentialsProvider(this.profileName))
                 .build();
     }
     @Override
     public void upload(List<String> files) {
-        try {
-            for (String outputFile : files) {
-                try {
-                    this.s3Client.putObject(this.BucketName, outputFile, new File(prefix + outputFile));
-                } catch(Exception e){
-                    System.out.println(e.toString());
-                    System.out.println(outputFile + " not found");
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e.toString());
-            System.out.println(this.BucketName + " not found");
-        }
 
+        for (String outputFile : files) {
+            try {
+                this.s3Client.putObject(new PutObjectRequest(this.BucketName, prefix + outputFile, new File(outputFile)));
+            }
+            catch (AmazonS3Exception ex) {
+                System.out.println("Exception occured: The specified bucket does not exist: " + this.BucketName);
+                break;
+            }
+            catch(SdkClientException ex){
+                System.out.println("Exception occured: " + outputFile + " not found (No such file or directory)");
+            }
+        }
     }
 }

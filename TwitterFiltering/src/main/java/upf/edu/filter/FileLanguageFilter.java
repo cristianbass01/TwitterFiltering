@@ -20,15 +20,13 @@ public class FileLanguageFilter implements LanguageFilter{
         FileReader reader = new FileReader(inputFile);
         BufferedReader bReader = new BufferedReader(reader);
 
-        int counter = 0;
         while(bReader.ready()) {
             String jsonTweet = bReader.readLine();
             if(! jsonTweet.equals("")) {
                 tweetsList.add(SimplifiedTweet.fromJson(jsonTweet));
-                counter++;
             }
         }
-        System.out.println("Tweets processed: "+counter);
+        System.out.println("        Tweets processed: "+ tweetsList.size());
         bReader.close();
     }
 
@@ -38,15 +36,18 @@ public class FileLanguageFilter implements LanguageFilter{
         BufferedWriter bWriter = new BufferedWriter(writer);
 
         int counter = 0;
+        StringBuilder buffer = new StringBuilder();
         for(Optional<SimplifiedTweet> tweet : tweetsList){
             if(tweet.isPresent()){
                 if(tweet.map(SimplifiedTweet::getLanguage).equals(Optional.ofNullable(language))){
-                    bWriter.write(tweet.map(SimplifiedTweet::toString).get());
+                    buffer.append(tweet.map(SimplifiedTweet::toString).get()).append("\n");
+                    //bWriter.write(tweet.map(SimplifiedTweet::toString).get() + "\n");
                     counter++;
                 }
             }
         }
-        System.out.println("Tweets found: " + counter);
+        bWriter.write(buffer.toString());
+        System.out.println("        Tweets found: " + counter);
         bWriter.close();
     }
 }
