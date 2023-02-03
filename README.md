@@ -16,14 +16,14 @@ to Amazon S3 in a given bucket name with a given key.
 A call with the following parameters:
 ```
 mvn package
-java -cp target/TwitterFiltering-1.0-SNAPSHOT.jar upf.edu.TwitterFilter ca ca lsds2022.lab1.output.<userID> ./src/main/resources/Eurovision3.json ./src/main/resources/Eurovision4.json ./src/main/resources/Eurovision5.json ./src/main/resources/Eurovision6.json ./src/main/resources/Eurovision7.json ./src/main/resources/Eurovision8.json ./src/main/resources/Eurovision9.json ./src/main/resources/Eurovision10.json
+java -cp target/TwitterFiltering-1.0-SNAPSHOT.jar upf.edu.TwitterFilter es es lsds2022.lab1.output.<userID> ./src/main/resources/Eurovision3.json ./src/main/resources/Eurovision4.json ./src/main/resources/Eurovision5.json ./src/main/resources/Eurovision6.json ./src/main/resources/Eurovision7.json ./src/main/resources/Eurovision8.json ./src/main/resources/Eurovision9.json ./src/main/resources/Eurovision10.json
 ```
-will read 3 files (f1.json f2.json f3.json), and generate a new output file /tmp/output-es.txt contain-
-ing all the tweets in the Spanish (es) language, then upload such file in an S3 bucket named test-bucket.
+will read 7 files (Eurovisions), and generate a new output file es contain-
+ing all the tweets in the Spanish (es) language, then upload such file in an S3 bucket named lsds2022.lab1.output.<userID>.
 
 ## Statistics (Benchmarking)
 1. Destination bucket: lsds2022.lab1.output.u210426
-2. 
+2. Statistics are as follows:
 ### Tweets in Spanish (es):
     Processing: ./src/main/resources/Eurovision3.json
         Tweets processed: 65746
@@ -130,10 +130,30 @@ ing all the tweets in the Spanish (es) language, then upload such file in an S3 
     Elapsed time in milliseconds in total: 74750
 
 
-3. 
-4. 
+3. Provide also a brief description of your runtime environment. Be sure to report the time unit that you
+      are using.
+
+      I'm using the following runtime environment:
+
+       openjdk version "19.0.1" 2022-10-18
+       OpenJDK Runtime Environment (build 19.0.1+10-Ubuntu-1ubuntu122.04) 
+       OpenJDK 64-Bit Server VM (build 19.0.1+10-Ubuntu-1ubuntu122.04, mixed mode, sharing)
+      Time unit: 
+
+       milliseconds (ms)
+
+4. Did you encounter any issue when performing the calculation?
+   No
 
 ## Extensions
 
-Describe unit tests
+Describe of the unit tests:
+1. toStringTest(): to test if the method toString of the class SimplifiedTweet is correct
+2. getLanguageTest(): to test if the getLanguage method of the SimplifiedTweet class is correct
+3. parsingRight(): to test the parsing from a Json string to a simplifiedTweet object (if the json is correct)
+4. parsingWrong(): to test the parsing from a Json string to a simplifiedTweet object (if the json is wrong and should return an exception)
+5. parsingMissing(): to test the parsing from a Json string to a simplifiedTweet object (if the json is missing variable lang = language. So the filter is taking into account this tweet only if we give an empty string)
+6. fileNotFoundTest(): to test if it gives an exception if we give it a wrong input file
+7. rightFilter(): to test if the filter gives the correct tweets
+8. noFilterTweet(): to test if the filter can also filter all the tweets without errors
 

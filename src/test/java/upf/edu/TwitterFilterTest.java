@@ -2,7 +2,6 @@ package upf.edu;
 
 import static org.junit.Assert.*;
 
-import com.google.gson.stream.MalformedJsonException;
 import org.junit.Before;
 import org.junit.Test;
 import upf.edu.filter.FileLanguageFilter;
