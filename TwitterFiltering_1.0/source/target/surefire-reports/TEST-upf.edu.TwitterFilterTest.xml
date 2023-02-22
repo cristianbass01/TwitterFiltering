@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="upf.edu.TwitterFilterTest" time="0.096" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/test-classes:/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/classes:/home/cristian/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristian/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristian/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/home/cristian/.m2/repository/com/amazonaws/aws-java-sdk-s3/1.12.396/aws-java-sdk-s3-1.12.396.jar:/home/cristian/.m2/repository/com/amazonaws/aws-java-sdk-kms/1.12.396/aws-java-sdk-kms-1.12.396.jar:/home/cristian/.m2/repository/com/amazonaws/aws-java-sdk-core/1.12.396/aws-java-sdk-core-1.12.396.jar:/home/cristian/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/cristian/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/cristian/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/cristian/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/cristian/.m2/repository/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.7.1/jackson-databind-2.12.7.1.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.7/jackson-annotations-2.12.7.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.7/jackson-core-2.12.7.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.12.6/jackson-dataformat-cbor-2.12.6.jar:/home/cristian/.m2/repository/joda-time/joda-time/2.8.1/joda-time-2.8.1.jar:/home/cristian/.m2/repository/com/amazonaws/jmespath-java/1.12.396/jmespath-java-1.12.396.jar:/home/cristian/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar:"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-19-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/surefire/surefirebooter2322602060707759916.jar /home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/surefire 2023-02-16T14-14-09_947-jvmRun1 surefire932123015882764832tmp surefire_07478999361953773989tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/test-classes:/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/classes:/home/cristian/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cristian/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cristian/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/home/cristian/.m2/repository/com/amazonaws/aws-java-sdk-s3/1.12.396/aws-java-sdk-s3-1.12.396.jar:/home/cristian/.m2/repository/com/amazonaws/aws-java-sdk-kms/1.12.396/aws-java-sdk-kms-1.12.396.jar:/home/cristian/.m2/repository/com/amazonaws/aws-java-sdk-core/1.12.396/aws-java-sdk-core-1.12.396.jar:/home/cristian/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/cristian/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/cristian/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/cristian/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/cristian/.m2/repository/software/amazon/ion/ion-java/1.0.2/ion-java-1.0.2.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.7.1/jackson-databind-2.12.7.1.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.7/jackson-annotations-2.12.7.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.7/jackson-core-2.12.7.jar:/home/cristian/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.12.6/jackson-dataformat-cbor-2.12.6.jar:/home/cristian/.m2/repository/joda-time/joda-time/2.8.1/joda-time-2.8.1.jar:/home/cristian/.m2/repository/com/amazonaws/jmespath-java/1.12.396/jmespath-java-1.12.396.jar:/home/cristian/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/cristian"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="/usr/lib/jvm/java-19-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/target/surefire/surefirebooter2322602060707759916.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.1+10-Ubuntu-1ubuntu122.04"/>
+    <property name="user.name" value="cristian"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-58-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/cristian/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="19.0.1"/>
+    <property name="user.dir" value="/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.vm.version" value="19.0.1+10-Ubuntu-1ubuntu122.04"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="rightFilter" classname="upf.edu.TwitterFilterTest" time="0.052"/>
+  <testcase name="parsingMissing" classname="upf.edu.TwitterFilterTest" time="0.004"/>
+  <testcase name="getLanguageTest" classname="upf.edu.TwitterFilterTest" time="0"/>
+  <testcase name="noFilterTweet" classname="upf.edu.TwitterFilterTest" time="0.004"/>
+  <testcase name="toStringTest" classname="upf.edu.TwitterFilterTest" time="0.001"/>
+  <testcase name="parsingRight" classname="upf.edu.TwitterFilterTest" time="0.003"/>
+  <testcase name="parsingWrong" classname="upf.edu.TwitterFilterTest" time="0.001"/>
+  <testcase name="fileNotFoundTest" classname="upf.edu.TwitterFilterTest" time="0"/>
+</testsuite>

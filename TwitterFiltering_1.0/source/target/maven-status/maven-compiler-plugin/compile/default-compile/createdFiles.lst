@@ -1,0 +1,6 @@
+upf/edu/TwitterFilter.class
+upf/edu/parser/SimplifiedTweet.class
+upf/edu/uploader/Uploader.class
+upf/edu/uploader/S3Uploader.class
+upf/edu/filter/FileLanguageFilter.class
+upf/edu/filter/LanguageFilter.class
