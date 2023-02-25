@@ -12,7 +12,6 @@ import java.util.Optional;
 public class SimplifiedTweet {
 
     // All classes use the same instance
-    private static JsonParser parser = new JsonParser();
 
     private final long tweetId;              // the id of the tweet ('id')
     private final String text;              // the content of the tweet ('text')
@@ -46,7 +45,7 @@ public class SimplifiedTweet {
         String language = "";          // the language of a tweet ('lang')
         long timestampMs = 0;          // seconduserIds from epoch ('timestamp_ms')
 
-        JsonElement je = JsonParser.parseString(jsonStr);
+        JsonElement je = new JsonParser().parse(jsonStr);
         JsonObject jo = je.getAsJsonObject();
 
         if (jo.has("id"))

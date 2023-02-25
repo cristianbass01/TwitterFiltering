@@ -6,9 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lsds2022.lab2" />
-        <module name="spark-test" />
-        <module name="source" />
+        <module name="TwitterFiltering" />
       </profile>
     </annotationProcessing>
   </component>
