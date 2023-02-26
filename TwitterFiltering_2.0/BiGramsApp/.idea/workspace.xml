@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddbd28fc-a57e-4965-8d96-4a7c5539a864" name="Changes" comment="" />
+    <list default="true" id="ddbd28fc-a57e-4965-8d96-4a7c5539a864" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/execution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/shakespeare.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/src/main/java/edu/upf/TwitterLanguageFilterApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/src/main/java/edu/upf/model/SimplifiedTweet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/classes/edu/upf/TwitterLanguageFilterApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/classes/edu/upf/model/SimplifiedTweet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../source/target/spark-filter-1.0-SNAPSHOT.jar" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +34,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -28,11 +53,11 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_2.0/TwitterLanguageFilterApp"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
