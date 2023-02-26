@@ -31,7 +31,7 @@ public class BiGramsApp {
                 .flatMap(s -> Arrays.asList(s.split("[ ]")).iterator())
                 .map(BiGramsApp::normalise);
         System.out.print(words);
-        
+
         /*
         JavaPairRDD<String, Integer> counts = sentences
             .flatMap(s -> Arrays.asList(s.split("[ ]")).iterator())
