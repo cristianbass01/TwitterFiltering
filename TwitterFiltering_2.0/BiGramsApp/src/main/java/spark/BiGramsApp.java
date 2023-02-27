@@ -5,10 +5,10 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.SparkConf;
 import scala.Tuple2;
+
 import spark.model.ExtendedSimplifiedTweet;
 
-import java.util.Arrays;
-import java.util.Optional;
+import java.util.*;
 
 public class BiGramsApp {
 
@@ -23,14 +23,28 @@ public class BiGramsApp {
         // Load input
         JavaRDD<String> sentences = sparkContext.textFile(input);
 
-        JavaRDD<String > words = sentences
+        JavaPairRDD<Tuple2<String, String>, Integer > words = sentences
                 .filter(tweet -> !tweet.equals(""))
                 .map(ExtendedSimplifiedTweet::fromJson)
-                .filter(tweet -> tweet.map(ExtendedSimplifiedTweet::getLanguage).equals(Optional.ofNullable(language)) && tweet.map(ExtendedSimplifiedTweet::isRetweeted).get() )
+                .filter(tweet -> tweet.map(ExtendedSimplifiedTweet::getLanguage).equals(Optional.ofNullable(language)) && !tweet.map(ExtendedSimplifiedTweet::isRetweeted).get() )
                 .map(tweet -> tweet.map(ExtendedSimplifiedTweet::getText).get())
-                .flatMap(s -> Arrays.asList(s.split("[ ]")).iterator())
-                .map(BiGramsApp::normalise);
-        System.out.print(words);
+                .flatMapToPair(word -> {
+                    String[] w = word.split("[ ]");
+                    List<Tuple2<String, String>> pairs = new ArrayList<>();
+                    for (int i = 0; i < w.length - 1; i++) {
+                        pairs.add(new Tuple2<>(w[i], w[i+1]));
+                    }
+                    return pairs.iterator();
+                })
+                .mapValues(BiGramsApp::normalise)
+                .mapToPair(word -> new Tuple2<>(word, 1))
+                .reduceByKey(Integer::sum)
+                .sortByKey(Comparator.comparing(o -> (o._1 + " " + o._2)))
+                .mapToPair(t -> new Tuple2<>(t._2, t._1))
+                .sortByKey(false)
+                .mapToPair(t -> new Tuple2<>(t._2, t._1));
+        System.out.print(words.collect());
+
 
         /*
         JavaPairRDD<String, Integer> counts = sentences

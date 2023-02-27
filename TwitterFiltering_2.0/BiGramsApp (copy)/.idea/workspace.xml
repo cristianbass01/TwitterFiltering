@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73128c8d-cd48-4d80-a040-9bdab32afb9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spark/BiGramsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spark/BiGramsApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spark/WordCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spark/MostRetweetedApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spark/MostRetweetedApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/src/main/java/spark/BiGramsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/src/main/java/spark/BiGramsApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/classes/spark/WordCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +54,24 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_2.0/MostRetweetedApp"
+    "last_opened_file_path": "/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_2.0/BiGramsApp (copy)"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BiGramsApp (copy)" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BiGramsApp (copy)" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
