@@ -23,43 +23,37 @@ public class BiGramsApp {
         // Load input
         JavaRDD<String> sentences = sparkContext.textFile(input);
 
-        JavaPairRDD<Tuple2<String, String>, Integer > words = sentences
+        JavaPairRDD<Tuple2<String, String> , Integer > bigrams = sentences
                 .filter(tweet -> !tweet.equals(""))
                 .map(ExtendedSimplifiedTweet::fromJson)
                 .filter(tweet -> tweet.map(ExtendedSimplifiedTweet::getLanguage).equals(Optional.ofNullable(language)) && !tweet.map(ExtendedSimplifiedTweet::isRetweeted).get() )
-                .map(tweet -> tweet.map(ExtendedSimplifiedTweet::getText).get())
+                .map(tweet -> normalise(tweet.map(ExtendedSimplifiedTweet::getText).get()))
                 .flatMapToPair(word -> {
-                    String[] w = word.split("[ ]");
+                    String[] w = word.split("[+( )]");
                     List<Tuple2<String, String>> pairs = new ArrayList<>();
-                    for (int i = 0; i < w.length - 1; i++) {
-                        pairs.add(new Tuple2<>(w[i], w[i+1]));
+                    for (int count = 0; count < w.length - 1; count++) {
+                        pairs.add(new Tuple2<>(w[count], w[count+1]));
                     }
                     return pairs.iterator();
                 })
-                .mapValues(BiGramsApp::normalise)
+                .filter(o -> !o._1.equals("") && !o._2.equals(""))
                 .mapToPair(word -> new Tuple2<>(word, 1))
                 .reduceByKey(Integer::sum)
-                .sortByKey(Comparator.comparing(o -> (o._1 + " " + o._2)))
+                .mapToPair(o -> new Tuple2<>(o._1._1 + " " + o._1._2, o._2))
+                .sortByKey()
                 .mapToPair(t -> new Tuple2<>(t._2, t._1))
                 .sortByKey(false)
-                .mapToPair(t -> new Tuple2<>(t._2, t._1));
-        System.out.print(words.collect());
-
-
-        /*
-        JavaPairRDD<String, Integer> counts = sentences
-            .flatMap(s -> Arrays.asList(s.split("[ ]")).iterator())
-            .map(word -> normalise(word))
-            .mapToPair(word -> new Tuple2<>(word, 1))
-            .reduceByKey((a, b) -> a + b);
-        System.out.println("Total words: " + counts.count());
-        counts.saveAsTextFile(outputDir);
-         */
-
-
+                //.mapToPair(t -> new Tuple2<>(t._2, t._1));
+                .mapToPair(s -> new Tuple2<>(new Tuple2<>(s._2.split("[ ]")[0], s._2.split("[ ]")[1]),s._1));
+        List<Tuple2<Tuple2<String, String>, Integer > > topBigrams = bigrams.take(10);
+        System.out.println("Top 10 most used bigrams in original tweets: ");
+        for(int y = 0; y < topBigrams.size(); y++){
+            System.out.println(y + ": (" + topBigrams.get(y)._1._1 + ") - (" + topBigrams.get(y)._1._2 + ") repeated " + topBigrams.get(y)._2 + " times");
+        }
+        bigrams.saveAsTextFile(outputDir);
     }
 
     private static String normalise(String word) {
-        return word.trim().toLowerCase();
+        return word.trim().toLowerCase().replaceAll("[^\\p{L}\\p{M}\\p{N}\\p{P}\\p{Cf}\\p{Cs}]","");
     }
 }

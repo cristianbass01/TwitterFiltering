@@ -4,19 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c63d938-1a54-4daa-a96a-abf57b5a539b" name="Changes" comment="">
+    <list default="true" id="73128c8d-cd48-4d80-a040-9bdab32afb9b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp (copy)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/spark-bigrams.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/src/main/java/spark/MostRetweetedApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/src/main/java/spark/model/ExtendedSimplifiedTweet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/classes/spark/BiGramsApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/classes/spark/model/ExtendedSimplifiedTweet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/spark-bigrams-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp (copy)/target/spark-test-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BiGramsApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BiGramsApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BiGramsApp/src/main/java/spark/BiGramsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/src/main/java/spark/BiGramsApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/classes/spark/WordCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/classes/spark/BiGramsApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/classes/spark/BiGramsApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BiGramsApp/target/spark-bigrams-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../BiGramsApp/target/spark-bigrams-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resource/Eurovision82t.json" beforeDir="false" afterPath="$PROJECT_DIR$/../resource/Eurovision82t.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -24,7 +52,19 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2MKDnp89guSaxDKZ7rNIHgMMiqM" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MHCYeYUvKhpGOledymjJU6uQw7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,17 +74,47 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_2.0/BiGramsApp (copy)"
+    "last_opened_file_path": "/home/cristian/OneDrive/3 anno/UPF 2 trim/Large-scale distributed systems/Lab/TwitterFiltering/TwitterFiltering_1.0/source/resources/Eurovision10.json"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="MostRetweetedApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="spark.MostRetweetedApp" />
+      <module name="spark-mostretweet" />
+      <option name="PROGRAM_PARAMETERS" value="spark-submit --class spark.MostRetweetedApp ./target/spark-mostretweet-1.0-SNAPSHOT.jar ./../../TwitterFiltering_1.0/source/resources/ " />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BiGramsApp (copy)" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BiGramsApp (copy)" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4c63d938-1a54-4daa-a96a-abf57b5a539b" name="Changes" comment="" />
-      <created>1677507549968</created>
+      <changelist id="73128c8d-cd48-4d80-a040-9bdab32afb9b" name="Changes" comment="" />
+      <created>1677415169987</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677507549968</updated>
+      <updated>1677415169987</updated>
     </task>
     <servers />
   </component>
